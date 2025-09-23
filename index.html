@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="player">
+        <h1>Musify</h1>
+
+        <div class="now-playing">
+            <span id="current-song">Select a song</span>
+        </div>
+
+        <!-- Custom Audio Bar -->
+        <div class="audio-player">
+            <div id="progress-container">
+                <div id="progress"></div>
+            </div>
+            <div class="time">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prev"><i class="fa-solid fa-backward"></i></button>
+            <button id="play"><i class="fa-solid fa-play"></i></button>
+            <button id="next"><i class="fa-solid fa-forward"></i></button>
+            <button id="shuffle"><i class="fa-solid fa-shuffle"></i></button>
+        </div>
+
+        <!-- Playlist -->
+        <ul id="playlist">
+            <!-- Songs populated by JS -->
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
