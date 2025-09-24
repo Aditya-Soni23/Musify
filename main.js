@@ -226,7 +226,16 @@ progressContainer.addEventListener('click', (e) => {
 });
 
 // Auto next
-audio.addEventListener('ended', () => nextBtn.click());
+audio.addEventListener('ended', () => {
+    if (isShuffling) {
+        currentIndex = Math.floor(Math.random() * songs.length);
+    } else {
+        currentIndex = (currentIndex + 1) % songs.length;
+    }
+    loadSong();
+    playSong();
+});
+
 
 function updateActiveSong() {
     document.querySelectorAll('#playlist li').forEach((li, idx) => {
