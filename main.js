@@ -233,6 +233,14 @@ function updateActiveSong() {
         li.classList.toggle('active', idx === currentIndex);
     });
 }
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+    document.querySelectorAll('#playlist li').forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(query) ? '' : 'none';
+    });
+});
 
 // Initialize
 document.body.appendChild(audio);
